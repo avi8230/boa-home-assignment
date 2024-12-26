@@ -1,13 +1,15 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "2677176e30c994a5dd9ba51118d70020"
-application_url = "https://shopify.dev/apps/default-app-home"
+application_url = "https://myrtle-spots-lamb-albania.trycloudflare.com"
 embedded = true
 name = "boa-home-task-AP"
 handle = "boa-home-task-ap"
 
 [build]
 include_config_on_deploy = true
+dev_store_url = "home-assignment-233.myshopify.com"
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2024-10"
@@ -17,7 +19,11 @@ api_version = "2024-10"
 scopes = ""
 
 [auth]
-redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
+redirect_urls = [
+  "https://myrtle-spots-lamb-albania.trycloudflare.com/auth/callback",
+  "https://myrtle-spots-lamb-albania.trycloudflare.com/auth/shopify/callback",
+  "https://myrtle-spots-lamb-albania.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
